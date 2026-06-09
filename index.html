@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CP Cornhole League 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:    #1F3864;
+    --gold:    #C9A84C;
+    --gold-lt: #F2E4C4;
+    --cream:   #FAF8F4;
+    --white:   #FFFFFF;
+    --gray1:   #F4F2EE;
+    --gray2:   #E4E0D8;
+    --gray3:   #9C9488;
+    --text:    #1A1A1A;
+    --green:   #2D6A4F;
+    --red:     #9B2226;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    padding: 48px 24px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(201,168,76,0.04) 40px,
+      rgba(201,168,76,0.04) 41px
+    );
+  }
+  .hero-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    position: relative;
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 10vw, 96px);
+    color: var(--white);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    position: relative;
+  }
+  .hero-title span { color: var(--gold); }
+  .hero-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 16px;
+    letter-spacing: 0.04em;
+    position: relative;
+  }
+  .hero-badge {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  /* ── NAV TABS ── */
+  .tabs {
+    background: var(--white);
+    border-bottom: 2px solid var(--gray2);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .tab {
+    padding: 16px 28px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gray3);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: color 0.15s, border-color 0.15s;
+    white-space: nowrap;
+  }
+  .tab:hover { color: var(--navy); }
+  .tab.active { color: var(--navy); border-bottom-color: var(--gold); }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+  .section { display: none; }
+  .section.active { display: block; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--navy);
+    letter-spacing: 0.03em;
+    margin-bottom: 28px;
+  }
+
+  /* ── STANDINGS TABLE ── */
+  .standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  .standings-table thead tr {
+    background: var(--navy);
+  }
+  .standings-table thead th {
+    padding: 14px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+  }
+  .standings-table thead th:first-child,
+  .standings-table thead th:nth-child(2) { text-align: left; }
+  .standings-table tbody tr {
+    border-bottom: 1px solid var(--gray1);
+    transition: background 0.1s;
+  }
+  .standings-table tbody tr:hover { background: var(--gray1); }
+  .standings-table tbody tr:last-child { border-bottom: none; }
+  .standings-table tbody td {
+    padding: 14px 16px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .standings-table tbody td:first-child { text-align: center; width: 52px; }
+  .standings-table tbody td:nth-child(2) { text-align: left; font-weight: 600; }
+  .rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .rank-1 { background: var(--gold); color: var(--navy); }
+  .rank-2 { background: var(--gray2); color: var(--navy); }
+  .rank-3 { background: #CD7F32; color: white; }
+  .rank-other { background: var(--gray1); color: var(--gray3); }
+  .pts-cell { font-weight: 700; color: var(--navy); }
+  .diff-pos { color: var(--green); font-weight: 600; }
+  .diff-neg { color: var(--red); font-weight: 600; }
+  .playoff-cut {
+    border-top: 2px dashed var(--gold) !important;
+  }
+  .playoff-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 6px 16px;
+    background: var(--gold-lt);
+    text-align: center;
+  }
+
+  /* ── WEEK SELECTOR ── */
+  .week-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .week-btn {
+    padding: 8px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 2px solid var(--gray2);
+    background: var(--white);
+    color: var(--gray3);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .week-btn:hover { border-color: var(--navy); color: var(--navy); }
+  .week-btn.active { background: var(--navy); border-color: var(--navy); color: var(--white); }
+
+  /* ── MATCH CARDS ── */
+  .matches-grid { display: grid; gap: 16px; }
+  .match-card {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+  .match-header {
+    background: var(--navy);
+    padding: 8px 16px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .match-body {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 20px 24px;
+    gap: 16px;
+  }
+  .match-team { font-size: 15px; font-weight: 600; color: var(--navy); }
+  .match-team.away { text-align: right; }
+  .match-score-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: var(--gray3);
+    white-space: nowrap;
+  }
+  .match-score-box.played { color: var(--navy); }
+  .score-divider { font-size: 20px; color: var(--gray2); }
+  .match-winner-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    padding: 3px 8px;
+    background: rgba(45,106,79,0.1);
+    border-radius: 2px;
+    display: inline-block;
+    margin-top: 4px;
+  }
+  .match-pending {
+    font-size: 11px;
+    color: var(--gray3);
+    text-align: center;
+    padding: 4px 0;
+    font-style: italic;
+  }
+
+  /* ── BRACKET ── */
+  .bracket-wrap {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+    overflow-x: auto;
+  }
+  .bracket-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    min-width: 640px;
+  }
+  .bracket-round-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--gold-lt);
+  }
+  .bracket-col { display: flex; flex-direction: column; justify-content: space-around; }
+  .bracket-match {
+    border: 2px solid var(--gray2);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  .bracket-team {
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    border-bottom: 1px solid var(--gray1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bracket-team:last-child { border-bottom: none; }
+  .bracket-team.winner { background: rgba(201,168,76,0.12); font-weight: 700; color: var(--navy); }
+  .bracket-seed {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--gray3);
+    margin-right: 8px;
+  }
+  .bracket-score { font-weight: 700; color: var(--navy); font-size: 15px; }
+  .champion-box {
+    border: 3px solid var(--gold);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    background: var(--gold-lt);
+  }
+  .champion-trophy { font-size: 36px; margin-bottom: 8px; }
+  .champion-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .champion-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--navy);
+  }
+  .tbd { color: var(--gray3); font-style: italic; }
+  .bracket-inactive {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--gray3);
+    font-size: 14px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 12px;
+    color: var(--gray3);
+    border-top: 1px solid var(--gray2);
+    margin-top: 40px;
+  }
+
+  @media (max-width: 600px) {
+    .tab { padding: 14px 14px; font-size: 11px; }
+    .match-body { padding: 16px; }
+    .match-team { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-eyebrow">Cerity Partners Chicago</div>
+  <div class="hero-title">CP <span>Cornhole</span><br>League</div>
+  <div class="hero-sub" id="hero-season">Summer 2026</div>
+  <div class="hero-badge" id="hero-status">Season Underway</div>
+</div>
+
+<nav class="tabs">
+  <div class="tab active" onclick="showTab('standings')">Standings</div>
+  <div class="tab" onclick="showTab('schedule')">Schedule</div>
+  <div class="tab" onclick="showTab('bracket')">Bracket</div>
+</nav>
+
+<div class="container">
+
+  <!-- STANDINGS -->
+  <div id="tab-standings" class="section active">
+    <div class="section-label">Regular Season</div>
+    <div class="section-title">Current Standings</div>
+    <table class="standings-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Team</th>
+          <th>W</th>
+          <th>L</th>
+          <th>Pts</th>
+          <th>PF</th>
+          <th>PA</th>
+          <th>Diff</th>
+        </tr>
+      </thead>
+      <tbody id="standings-body"></tbody>
+    </table>
+    <p style="font-size:12px;color:var(--gray3);margin-top:12px;">Top 8 teams advance to playoffs. Tiebreaker: point differential.</p>
+  </div>
+
+  <!-- SCHEDULE -->
+  <div id="tab-schedule" class="section">
+    <div class="section-label">Matchups</div>
+    <div class="section-title">Weekly Schedule</div>
+    <div class="week-nav" id="week-nav"></div>
+    <div class="matches-grid" id="matches-grid"></div>
+  </div>
+
+  <!-- BRACKET -->
+  <div id="tab-bracket" class="section">
+    <div class="section-label">Postseason</div>
+    <div class="section-title">Playoff Bracket</div>
+    <div class="bracket-wrap" id="bracket-wrap"></div>
+  </div>
+
+</div>
+
+<div class="footer">
+  CP Cornhole League 2026 &nbsp;·&nbsp; Organized by Dan &nbsp;·&nbsp; Updated weekly
+</div>
+
+<script>
+let DATA = null;
+let activeWeek = 1;
+
+async function loadData() {
+  try {
+    const res = await fetch('data.json?t=' + Date.now());
+    DATA = await res.json();
+    render();
+  } catch(e) {
+    document.body.innerHTML += '<p style="text-align:center;padding:40px;color:#9B2226;">Could not load league data. Make sure data.json is in the same folder.</p>';
+  }
+}
+
+function teamName(id) {
+  const t = DATA.teams.find(t => t.id === id);
+  return t ? `${t.player1} & ${t.player2}` : 'TBD';
+}
+
+function getStandings() {
+  return [...DATA.teams]
+    .map(t => ({
+      ...t,
+      pts: t.wins * 2,
+      diff: t.pf - t.pa
+    }))
+    .sort((a, b) => b.pts - a.pts || b.diff - a.diff);
+}
+
+function render() {
+  renderStandings();
+  renderWeekNav();
+  renderMatches(activeWeek);
+  renderBracket();
+  document.getElementById('hero-season').textContent = DATA.league.season;
+  const wk = DATA.league.currentWeek;
+  const status = DATA.league.status;
+  document.getElementById('hero-status').textContent =
+    status === 'playoffs' ? 'Playoffs' :
+    status === 'complete' ? 'Season Complete' :
+    `Week ${wk} of ${DATA.league.totalWeeks}`;
+}
+
+function renderStandings() {
+  const sorted = getStandings();
+  const playoffLine = Math.min(8, sorted.length);
+  let html = '';
+  sorted.forEach((t, i) => {
+    const rank = i + 1;
+    const cutClass = rank === playoffLine ? 'playoff-cut' : '';
+    const badgeClass = rank === 1 ? 'rank-1' : rank === 2 ? 'rank-2' : rank === 3 ? 'rank-3' : 'rank-other';
+    const diffClass = t.diff > 0 ? 'diff-pos' : t.diff < 0 ? 'diff-neg' : '';
+    const diffStr = t.diff > 0 ? `+${t.diff}` : `${t.diff}`;
+    html += `<tr class="${cutClass}">
+      <td><span class="rank-badge ${badgeClass}">${rank}</span></td>
+      <td>${t.player1} &amp; ${t.player2}</td>
+      <td>${t.wins}</td>
+      <td>${t.losses}</td>
+      <td class="pts-cell">${t.pts}</td>
+      <td>${t.pf}</td>
+      <td>${t.pa}</td>
+      <td class="${diffClass}">${diffStr}</td>
+    </tr>`;
+  });
+  document.getElementById('standings-body').innerHTML = html;
+}
+
+function renderWeekNav() {
+  let html = '';
+  for (let w = 1; w <= DATA.league.totalWeeks; w++) {
+    html += `<button class="week-btn ${w === activeWeek ? 'active' : ''}" onclick="selectWeek(${w})">Week ${w}</button>`;
+  }
+  document.getElementById('week-nav').innerHTML = html;
+}
+
+function selectWeek(w) {
+  activeWeek = w;
+  renderWeekNav();
+  renderMatches(w);
+}
+
+function renderMatches(week) {
+  const weekData = DATA.weeks.find(w => w.week === week);
+  if (!weekData) return;
+  let html = '';
+  weekData.matches.forEach((m, i) => {
+    const home = teamName(m.home);
+    const away = teamName(m.away);
+    const played = m.homeScore !== null && m.awayScore !== null;
+    const homeWon = played && m.homeScore > m.awayScore;
+    const awayWon = played && m.awayScore > m.homeScore;
+
+    html += `<div class="match-card">
+      <div class="match-header">Match ${i + 1} &nbsp;·&nbsp; Week ${week}</div>
+      <div class="match-body">
+        <div>
+          <div class="match-team">${home}</div>
+          ${homeWon ? '<div class="match-winner-tag">Winner</div>' : ''}
+        </div>
+        <div class="match-score-box ${played ? 'played' : ''}">
+          ${played
+            ? `<span>${m.homeScore}</span><span class="score-divider">—</span><span>${m.awayScore}</span>`
+            : `<span class="match-pending">vs</span>`
+          }
+        </div>
+        <div style="text-align:right">
+          <div class="match-team away">${away}</div>
+          ${awayWon ? '<div class="match-winner-tag" style="float:right">Winner</div>' : ''}
+        </div>
+      </div>
+    </div>`;
+  });
+  document.getElementById('matches-grid').innerHTML = html;
+}
+
+function renderBracket() {
+  const wrap = document.getElementById('bracket-wrap');
+  if (!DATA.playoffs.active) {
+    wrap.innerHTML = `<div class="bracket-inactive">
+      <div style="font-size:32px;margin-bottom:12px;">🏆</div>
+      <div style="font-weight:600;color:var(--navy);margin-bottom:6px;">Playoffs begin after Week ${DATA.league.totalWeeks}</div>
+      <div>Top 8 teams advance, seeded by points and point differential.</div>
+    </div>`;
+    return;
+  }
+
+  const standings = getStandings();
+  function seedName(seed) {
+    const t = standings[seed - 1];
+    return t ? `${t.player1} & ${t.player2}` : 'TBD';
+  }
+
+  const qf = DATA.playoffs.bracket[0].matches;
+  const sf = DATA.playoffs.bracket[1].matches;
+  const cf = DATA.playoffs.bracket[2].matches[0];
+
+  let html = '<div class="bracket-grid">';
+
+  // Quarterfinals
+  html += '<div><div class="bracket-round-label">Quarterfinals</div>';
+  qf.forEach(m => {
+    const n1 = m.team1 || seedName(m.seed1);
+    const n2 = m.team2 || seedName(m.seed2);
+    const w1 = m.score1 !== null && m.score1 > m.score2;
+    const w2 = m.score2 !== null && m.score2 > m.score1;
+    html += `<div class="bracket-match">
+      <div class="bracket-team ${w1 ? 'winner' : ''}">
+        <span><span class="bracket-seed">${m.seed1}</span>${n1}</span>
+        ${m.score1 !== null ? `<span class="bracket-score">${m.score1}</span>` : ''}
+      </div>
+      <div class="bracket-team ${w2 ? 'winner' : ''}">
+        <span><span class="bracket-seed">${m.seed2}</span>${n2}</span>
+        ${m.score2 !== null ? `<span class="bracket-score">${m.score2}</span>` : ''}
+      </div>
+    </div>`;
+  });
+  html += '</div>';
+
+  // Semifinals
+  html += '<div><div class="bracket-round-label">Semifinals</div>';
+  sf.forEach(m => {
+    const n1 = m.team1 || 'TBD'; const n2 = m.team2 || 'TBD';
+    const w1 = m.score1 !== null && m.score1 > m.score2;
+    const w2 = m.score2 !== null && m.score2 > m.score1;
+    html += `<div class="bracket-match">
+      <div class="bracket-team ${w1 ? 'winner' : ''} ${!m.team1 ? 'tbd' : ''}">
+        <span>${n1}</span>${m.score1 !== null ? `<span class="bracket-score">${m.score1}</span>` : ''}
+      </div>
+      <div class="bracket-team ${w2 ? 'winner' : ''} ${!m.team2 ? 'tbd' : ''}">
+        <span>${n2}</span>${m.score2 !== null ? `<span class="bracket-score">${m.score2}</span>` : ''}
+      </div>
+    </div>`;
+  });
+  html += '</div>';
+
+  // Championship
+  html += '<div><div class="bracket-round-label">Championship</div>';
+  const cn1 = cf.team1 || 'TBD'; const cn2 = cf.team2 || 'TBD';
+  const cw1 = cf.score1 !== null && cf.score1 > cf.score2;
+  const cw2 = cf.score2 !== null && cf.score2 > cf.score1;
+  html += `<div class="bracket-match">
+    <div class="bracket-team ${cw1 ? 'winner' : ''} ${!cf.team1 ? 'tbd' : ''}">
+      <span>${cn1}</span>${cf.score1 !== null ? `<span class="bracket-score">${cf.score1}</span>` : ''}
+    </div>
+    <div class="bracket-team ${cw2 ? 'winner' : ''} ${!cf.team2 ? 'tbd' : ''}">
+      <span>${cn2}</span>${cf.score2 !== null ? `<span class="bracket-score">${cf.score2}</span>` : ''}
+    </div>
+  </div>`;
+  html += '</div>';
+
+  // Champion
+  const champion = cw1 ? cn1 : cw2 ? cn2 : null;
+  html += `<div><div class="bracket-round-label">CP Champion</div>
+    <div class="champion-box">
+      <div class="champion-trophy">🏆</div>
+      <div class="champion-label">CP Champions</div>
+      <div class="champion-name ${!champion ? 'tbd' : ''}">${champion || 'TBD'}</div>
+    </div>
+  </div>`;
+
+  html += '</div>';
+  wrap.innerHTML = html;
+}
+
+function showTab(name) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+}
+
+loadData();
+</script>
+</body>
+</html>
