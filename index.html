@@ -88,6 +88,18 @@
     border-radius: 2px;
     position: relative;
   }
+  .hero-art {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: 28px auto 0;
+    opacity: 0.93;
+  }
+  .hero-art svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
   /* ── NAV TABS ── */
   .tabs {
@@ -389,6 +401,42 @@
   <div class="hero-title">CP <span>Cornhole</span><br>League</div>
   <div class="hero-sub" id="hero-season">Summer 2026</div>
   <div class="hero-badge" id="hero-status">Season Underway</div>
+
+  <div class="hero-art">
+    <svg viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- ground strip -->
+      <rect x="0" y="122" width="680" height="38" fill="rgba(255,255,255,0.04)" rx="0"/>
+      <!-- left board -->
+      <g transform="translate(60,28)">
+        <polygon points="10,92 100,92 88,0 22,0" fill="#C9A84C" stroke="#a07828" stroke-width="1.5"/>
+        <polygon points="10,92 100,92 95,80 15,80" fill="#a07828"/>
+        <ellipse cx="55" cy="35" rx="17" ry="17" fill="rgba(31,56,100,0.9)" stroke="#1F3864" stroke-width="1.5"/>
+        <line x1="10" y1="92" x2="2" y2="103" stroke="#7a5c3a" stroke-width="4" stroke-linecap="round"/>
+        <line x1="100" y1="92" x2="108" y2="103" stroke="#7a5c3a" stroke-width="4" stroke-linecap="round"/>
+      </g>
+      <!-- right board -->
+      <g transform="translate(520,28)">
+        <polygon points="10,92 100,92 88,0 22,0" fill="#C9A84C" stroke="#a07828" stroke-width="1.5"/>
+        <polygon points="10,92 100,92 95,80 15,80" fill="#a07828"/>
+        <ellipse cx="55" cy="35" rx="17" ry="17" fill="rgba(31,56,100,0.9)" stroke="#1F3864" stroke-width="1.5"/>
+        <line x1="10" y1="92" x2="2" y2="103" stroke="#7a5c3a" stroke-width="4" stroke-linecap="round"/>
+        <line x1="100" y1="92" x2="108" y2="103" stroke="#7a5c3a" stroke-width="4" stroke-linecap="round"/>
+      </g>
+      <!-- bags left (gold) -->
+      <rect x="168" y="110" width="28" height="17" rx="5" fill="#C9A84C" stroke="#a07828" stroke-width="1.5" transform="rotate(-7,182,118)"/>
+      <rect x="194" y="114" width="28" height="17" rx="5" fill="#C9A84C" stroke="#a07828" stroke-width="1.5" transform="rotate(5,208,122)"/>
+      <rect x="180" y="100" width="28" height="17" rx="5" fill="#a07828" stroke="#7a5010" stroke-width="1.5" transform="rotate(-2,194,108)"/>
+      <!-- bags right (navy) -->
+      <rect x="486" y="110" width="28" height="17" rx="5" fill="#1F3864" stroke="#152847" stroke-width="1.5" transform="rotate(6,500,118)"/>
+      <rect x="512" y="114" width="28" height="17" rx="5" fill="#1F3864" stroke="#152847" stroke-width="1.5" transform="rotate(-5,526,122)"/>
+      <rect x="498" y="100" width="28" height="17" rx="5" fill="#152847" stroke="#0e1d33" stroke-width="1.5" transform="rotate(2,512,108)"/>
+      <!-- center bags -->
+      <rect x="316" y="116" width="22" height="14" rx="4" fill="#C9A84C" stroke="#a07828" stroke-width="1.5" transform="rotate(-10,327,123)"/>
+      <rect x="342" y="119" width="22" height="14" rx="4" fill="#1F3864" stroke="#152847" stroke-width="1.5" transform="rotate(8,353,126)"/>
+      <!-- dashed midline -->
+      <line x1="172" y1="130" x2="508" y2="130" stroke="rgba(201,168,76,0.2)" stroke-width="1" stroke-dasharray="8 6"/>
+    </svg>
+  </div>
 </div>
 
 <nav class="tabs">
