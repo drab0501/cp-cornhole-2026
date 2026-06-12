@@ -3,57 +3,68 @@
     "name": "CP Cornhole League 2026",
     "season": "Summer 2026",
     "totalWeeks": 5,
-    "currentWeek": 1
+    "currentWeek": 1,
+    "status": "regular"
   },
   "teams": [
-    { "id": 1, "name": "Team 1", "players": ["Pat Tobin", "Jayla Williams-Craig"] },
-    { "id": 2, "name": "Team 2", "players": ["Tate Miller", "Grace Wentz"] },
-    { "id": 3, "name": "Team 3", "players": ["Jillian Laughlin", "Bailey Herridge"] },
-    { "id": 4, "name": "Team 4", "players": ["Elissa Berger", "Jameson Torrence"] },
-    { "id": 5, "name": "Team 5", "players": ["Abraham Jimenez", "Meg Rowley"] },
-    { "id": 6, "name": "Team 6", "players": ["Jon Cordes", "David Gifford"] },
-    { "id": 7, "name": "Team 7", "players": ["Tom Lisnich", "Brandon Eckhardt"] },
-    { "id": 8, "name": "Team 8", "players": ["William Rouse", "Chris Curtis"] },
-    { "id": 9, "name": "Team 9", "players": ["Daniel Rabinovich", "Suk Shah"] },
-    { "id": 10, "name": "Team 10", "players": ["Hannah Christopher", "Pace Williams"] },
-    { "id": 11, "name": "Team 11", "players": ["Doug Nardi", "Matt McGinn"] },
-    { "id": 12, "name": "Team 12", "players": ["Ayisha Tahir", "Tim Schloff"] },
-    { "id": 13, "name": "Team 13", "players": ["Erica Bunnell", "Raveen Patel"] },
-    { "id": 14, "name": "Team 14", "players": ["Adarsh Menon", "Kevin Koehler"] }
+    { "id": 1,  "player1": "Pat Tobin",          "player2": "Jayla Williams-Craig", "wins": 0, "losses": 0, "pf": 0, "pa": 0 },
+    { "id": 2,  "player1": "Tate Miller",         "player2": "Grace Wentz",          "wins": 0, "losses": 0, "pf": 0, "pa": 0 },
+    { "id": 3,  "player1": "Jillian Laughlin",    "player2": "Bailey Herridge",      "wins": 0, "losses": 0, "pf": 0, "pa": 0 },
+    { "id": 4,  "player1": "Elissa Berger",       "player2": "Jameson Torrence",     "wins": 0, "losses": 0, "pf": 0, "pa": 0 },
+    { "id": 5,  "player1": "Abraham Jimenez",     "player2": "Meg Rowley",           "wins": 0, "losses": 0, "pf": 0, "pa": 0 },
+    { "id": 6,  "player1": "Jon Cordes",          "player2": "David Gifford",        "wins": 0, "losses": 0, "pf": 0, "pa": 0 },
+    { "id": 7,  "player1": "Tom Lisnich",         "player2": "Brandon Eckhardt",     "wins": 0, "losses": 0, "pf": 0, "pa": 0 },
+    { "id": 8,  "player1": "William Rouse",       "player2": "Chris Curtis",         "wins": 0, "losses": 0, "pf": 0, "pa": 0 },
+    { "id": 9,  "player1": "Daniel Rabinovich",   "player2": "Suk Shah",             "wins": 0, "losses": 0, "pf": 0, "pa": 0 },
+    { "id": 10, "player1": "Hannah Christopher",  "player2": "Pace Williams",        "wins": 0, "losses": 0, "pf": 0, "pa": 0 },
+    { "id": 11, "player1": "Doug Nardi",          "player2": "Matt McGinn",          "wins": 0, "losses": 0, "pf": 0, "pa": 0 },
+    { "id": 12, "player1": "Ayisha Tahir",        "player2": "Tim Schloff",          "wins": 0, "losses": 0, "pf": 0, "pa": 0 },
+    { "id": 13, "player1": "Erica Bunnell",       "player2": "Raveen Patel",         "wins": 0, "losses": 0, "pf": 0, "pa": 0 },
+    { "id": 14, "player1": "Adarsh Menon",        "player2": "Kevin Koehler",        "wins": 0, "losses": 0, "pf": 0, "pa": 0 }
   ],
-  "standings": [
-    { "teamId": 1,  "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 },
-    { "teamId": 2,  "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 },
-    { "teamId": 3,  "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 },
-    { "teamId": 4,  "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 },
-    { "teamId": 5,  "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 },
-    { "teamId": 6,  "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 },
-    { "teamId": 7,  "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 },
-    { "teamId": 8,  "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 },
-    { "teamId": 9,  "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 },
-    { "teamId": 10, "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 },
-    { "teamId": 11, "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 },
-    { "teamId": 12, "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 },
-    { "teamId": 13, "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 },
-    { "teamId": 14, "wins": 0, "losses": 0, "points": 0, "pointsFor": 0, "pointsAgainst": 0 }
-  ],
-  "schedule": [
+  "weeks": [
     {
       "week": 1,
       "matches": [
-        { "id": "w1m1", "home": 9,  "away": 8,  "homeScore": null, "awayScore": null, "winner": null },
-        { "id": "w1m2", "home": 14, "away": 13, "homeScore": null, "awayScore": null, "winner": null },
-        { "id": "w1m3", "home": 5,  "away": 3,  "homeScore": null, "awayScore": null, "winner": null },
-        { "id": "w1m4", "home": 2,  "away": 7,  "homeScore": null, "awayScore": null, "winner": null },
-        { "id": "w1m5", "home": 6,  "away": 10, "homeScore": null, "awayScore": null, "winner": null },
-        { "id": "w1m6", "home": 12, "away": 1,  "homeScore": null, "awayScore": null, "winner": null },
-        { "id": "w1m7", "home": 4,  "away": 11, "homeScore": null, "awayScore": null, "winner": null }
+        { "home": 9,  "away": 8,  "homeScore": null, "awayScore": null },
+        { "home": 14, "away": 13, "homeScore": null, "awayScore": null },
+        { "home": 5,  "away": 3,  "homeScore": null, "awayScore": null },
+        { "home": 2,  "away": 7,  "homeScore": null, "awayScore": null },
+        { "home": 6,  "away": 10, "homeScore": null, "awayScore": null },
+        { "home": 12, "away": 1,  "homeScore": null, "awayScore": null },
+        { "home": 4,  "away": 11, "homeScore": null, "awayScore": null }
       ]
     },
     { "week": 2, "matches": [] },
     { "week": 3, "matches": [] },
     { "week": 4, "matches": [] },
     { "week": 5, "matches": [] }
-  ]
-}
+  ],
+  "playoffs": {
+    "active": false,
+    "bracket": [
+      {
+        "round": "Quarterfinals",
+        "matches": [
+          { "seed1": 1, "seed2": 8, "team1": null, "team2": null, "score1": null, "score2": null },
+          { "seed1": 4, "seed2": 5, "team1": null, "team2": null, "score1": null, "score2": null },
+          { "seed1": 3, "seed2": 6, "team1": null, "team2": null, "score1": null, "score2": null },
+          { "seed1": 2, "seed2": 7, "team1": null, "team2": null, "score1": null, "score2": null }
+        ]
+      },
+      {
+        "round": "Semifinals",
+        "matches": [
+          { "team1": null, "team2": null, "score1": null, "score2": null },
+          { "team1": null, "team2": null, "score1": null, "score2": null }
+        ]
+      },
+      {
+        "round": "Championship",
+        "matches": [
+          { "team1": null, "team2": null, "score1": null, "score2": null }
+        ]
+      }
+    ]
+  }
 }
