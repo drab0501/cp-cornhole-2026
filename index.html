@@ -539,7 +539,7 @@ function renderStandings() {
   let html = '';
   sorted.forEach((t, i) => {
     const rank = i + 1;
-    const cutClass = rank === playoffLine ? 'playoff-cut' : '';
+    const cutClass = rank === playoffLine + 1 ? 'playoff-cut' : '';
     const badgeClass = rank === 1 ? 'rank-1' : rank === 2 ? 'rank-2' : rank === 3 ? 'rank-3' : 'rank-other';
     const diffClass = t.diff > 0 ? 'diff-pos' : t.diff < 0 ? 'diff-neg' : '';
     const diffStr = t.diff > 0 ? `+${t.diff}` : `${t.diff}`;
