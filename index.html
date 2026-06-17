@@ -237,9 +237,27 @@
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.15s;
+    line-height: 1.25;
+    text-align: center;
   }
   .week-btn:hover { border-color: var(--navy); color: var(--navy); }
   .week-btn.active { background: var(--navy); border-color: var(--navy); color: var(--white); }
+  .week-btn-date {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    opacity: 0.7;
+    margin-top: 2px;
+  }
+  .week-deadline {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    margin: -10px 0 20px;
+  }
+  .week-deadline span { color: var(--gray3); font-weight: 500; }
 
   /* ── MATCH CARDS ── */
   .matches-grid { display: grid; gap: 16px; }
@@ -474,6 +492,7 @@
     <div class="section-label">Matchups</div>
     <div class="section-title">Weekly Schedule</div>
     <div class="week-nav" id="week-nav"></div>
+    <div class="week-deadline" id="week-deadline"></div>
     <div class="matches-grid" id="matches-grid"></div>
   </div>
 
@@ -557,10 +576,23 @@ function renderStandings() {
   document.getElementById('standings-body').innerHTML = html;
 }
 
+function fmtDate(iso, long) {
+  if (!iso) return '';
+  const [y, m, d] = iso.split('-').map(Number);
+  const dt = new Date(y, m - 1, d);
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const mons = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return long
+    ? `${days[dt.getDay()]}, ${mons[dt.getMonth()]} ${dt.getDate()}`
+    : `${mons[dt.getMonth()]} ${dt.getDate()}`;
+}
+
 function renderWeekNav() {
   let html = '';
   for (let w = 1; w <= DATA.league.totalWeeks; w++) {
-    html += `<button class="week-btn ${w === activeWeek ? 'active' : ''}" onclick="selectWeek(${w})">Week ${w}</button>`;
+    const wd = DATA.weeks.find(x => x.week === w);
+    const dateLabel = wd && wd.deadline ? `<span class="week-btn-date">${fmtDate(wd.deadline)}</span>` : '';
+    html += `<button class="week-btn ${w === activeWeek ? 'active' : ''}" onclick="selectWeek(${w})">Week ${w}${dateLabel}</button>`;
   }
   document.getElementById('week-nav').innerHTML = html;
 }
@@ -574,6 +606,12 @@ function selectWeek(w) {
 function renderMatches(week) {
   const weekData = DATA.weeks.find(w => w.week === week);
   if (!weekData) return;
+  const dl = document.getElementById('week-deadline');
+  if (dl) {
+    dl.innerHTML = weekData.deadline
+      ? `Play your Week ${week} match by ${fmtDate(weekData.deadline, true)} <span>· report results by end of day</span>`
+      : '';
+  }
   let html = '';
   weekData.matches.forEach((m, i) => {
     const home = teamName(m.home);
@@ -610,7 +648,7 @@ function renderBracket() {
   if (!DATA.playoffs.active) {
     wrap.innerHTML = `<div class="bracket-inactive">
       <div style="font-size:32px;margin-bottom:12px;">🏆</div>
-      <div style="font-weight:600;color:var(--navy);margin-bottom:6px;">Playoffs begin after Week ${DATA.league.totalWeeks}</div>
+      <div style="font-weight:600;color:var(--navy);margin-bottom:6px;">Playoffs begin after Week ${DATA.league.totalWeeks}${DATA.playoffs.startDate ? ` &nbsp;·&nbsp; ${fmtDate(DATA.playoffs.startDate, true)}` : ''}</div>
       <div>Top 8 teams advance, seeded by points and point differential.</div>
     </div>`;
     return;
