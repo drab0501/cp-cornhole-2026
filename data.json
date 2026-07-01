@@ -11,10 +11,10 @@
       "id": 1,
       "player1": "Pat Tobin",
       "player2": "Jayla Williams-Craig",
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
-      "pf": 0,
-      "pa": 0
+      "pf": 22,
+      "pa": 20
     },
     {
       "id": 2,
@@ -111,9 +111,9 @@
       "player1": "Ayisha Tahir",
       "player2": "Tim Schloff",
       "wins": 0,
-      "losses": 0,
-      "pf": 0,
-      "pa": 0
+      "losses": 1,
+      "pf": 20,
+      "pa": 22
     },
     {
       "id": 13,
@@ -172,8 +172,8 @@
         {
           "home": 12,
           "away": 1,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 20,
+          "awayScore": 22
         },
         {
           "home": 4,
