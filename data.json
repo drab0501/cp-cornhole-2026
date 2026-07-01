@@ -3,7 +3,7 @@
     "name": "CP Cornhole League 2026",
     "season": "Summer 2026",
     "totalWeeks": 5,
-    "currentWeek": 1,
+    "currentWeek": 2,
     "status": "regular"
   },
   "teams": [
@@ -30,9 +30,9 @@
       "player1": "Jillian Laughlin",
       "player2": "Bailey Herridge",
       "wins": 0,
-      "losses": 0,
-      "pf": 0,
-      "pa": 0
+      "losses": 1,
+      "pf": 20,
+      "pa": 22
     },
     {
       "id": 4,
@@ -47,55 +47,55 @@
       "id": 5,
       "player1": "Abraham Jimenez",
       "player2": "Meg Rowley",
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
-      "pf": 0,
-      "pa": 0
+      "pf": 22,
+      "pa": 20
     },
     {
       "id": 6,
       "player1": "Jon Cordes",
       "player2": "David Gifford",
-      "wins": 0,
-      "losses": 0,
-      "pf": 0,
-      "pa": 0
+      "wins": 1,
+      "losses": 1,
+      "pf": 32,
+      "pa": 24
     },
     {
       "id": 7,
       "player1": "Tom Lisnich",
       "player2": "Grace Wentz",
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
-      "pf": 0,
-      "pa": 0
+      "pf": 21,
+      "pa": 11
     },
     {
       "id": 8,
       "player1": "William Rouse",
       "player2": "Chris Curtis",
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
-      "pf": 0,
-      "pa": 0
+      "pf": 23,
+      "pa": 21
     },
     {
       "id": 9,
       "player1": "Daniel Rabinovich",
       "player2": "Suk Shah",
       "wins": 0,
-      "losses": 0,
-      "pf": 0,
-      "pa": 0
+      "losses": 1,
+      "pf": 21,
+      "pa": 23
     },
     {
       "id": 10,
       "player1": "Hannah Christopher",
       "player2": "Pace Williams",
       "wins": 0,
-      "losses": 0,
-      "pf": 0,
-      "pa": 0
+      "losses": 1,
+      "pf": 3,
+      "pa": 21
     },
     {
       "id": 11,
@@ -119,19 +119,19 @@
       "id": 13,
       "player1": "Erica Bunnell",
       "player2": "Raveen Patel",
-      "wins": 0,
+      "wins": 1,
       "losses": 0,
-      "pf": 0,
-      "pa": 0
+      "pf": 21,
+      "pa": 18
     },
     {
       "id": 14,
       "player1": "Adarsh Menon",
       "player2": "Kevin Koehler",
       "wins": 0,
-      "losses": 0,
-      "pf": 0,
-      "pa": 0
+      "losses": 1,
+      "pf": 18,
+      "pa": 21
     }
   ],
   "weeks": [
@@ -142,20 +142,20 @@
         {
           "home": 9,
           "away": 8,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 21,
+          "awayScore": 23
         },
         {
           "home": 14,
           "away": 13,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 18,
+          "awayScore": 21
         },
         {
           "home": 5,
           "away": 3,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 22,
+          "awayScore": 20
         },
         {
           "home": 2,
@@ -166,8 +166,8 @@
         {
           "home": 6,
           "away": 10,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 21,
+          "awayScore": 3
         },
         {
           "home": 12,
@@ -226,8 +226,8 @@
         {
           "home": 6,
           "away": 7,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 11,
+          "awayScore": 21
         }
       ]
     },
