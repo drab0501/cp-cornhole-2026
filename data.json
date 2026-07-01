@@ -13,8 +13,8 @@
       "player2": "Jayla Williams-Craig",
       "wins": 1,
       "losses": 0,
-      "pf": 22,
-      "pa": 20
+      "pf": 21,
+      "pa": 18
     },
     {
       "id": 2,
@@ -112,8 +112,8 @@
       "player2": "Tim Schloff",
       "wins": 0,
       "losses": 1,
-      "pf": 20,
-      "pa": 22
+      "pf": 18,
+      "pa": 21
     },
     {
       "id": 13,
@@ -172,8 +172,8 @@
         {
           "home": 12,
           "away": 1,
-          "homeScore": 20,
-          "awayScore": 22
+          "homeScore": 18,
+          "awayScore": 21
         },
         {
           "home": 4,
