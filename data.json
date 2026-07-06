@@ -3,7 +3,7 @@
     "name": "CP Cornhole League 2026",
     "season": "Summer 2026",
     "totalWeeks": 5,
-    "currentWeek": 2,
+    "currentWeek": 3,
     "status": "regular"
   },
   "teams": [
@@ -39,9 +39,9 @@
       "player1": "Elissa Berger",
       "player2": "Jameson Torrence",
       "wins": 0,
-      "losses": 0,
-      "pf": 0,
-      "pa": 0
+      "losses": 1,
+      "pf": 7,
+      "pa": 21
     },
     {
       "id": 5,
@@ -83,10 +83,10 @@
       "id": 9,
       "player1": "Daniel Rabinovich",
       "player2": "Suk Shah",
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
-      "pf": 21,
-      "pa": 23
+      "pf": 42,
+      "pa": 30
     },
     {
       "id": 10,
@@ -214,8 +214,8 @@
         {
           "home": 4,
           "away": 9,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 7,
+          "awayScore": 21
         },
         {
           "home": 5,
