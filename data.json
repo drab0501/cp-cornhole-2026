@@ -11,10 +11,10 @@
       "id": 1,
       "player1": "Pat Tobin",
       "player2": "Jayla Williams-Craig",
-      "wins": 2,
+      "wins": 3,
       "losses": 0,
-      "pf": 42,
-      "pa": 31
+      "pf": 63,
+      "pa": 42
     },
     {
       "id": 2,
@@ -29,19 +29,19 @@
       "id": 3,
       "player1": "Jillian Laughlin",
       "player2": "Bailey Herridge",
-      "wins": 0,
+      "wins": 1,
       "losses": 1,
-      "pf": 20,
-      "pa": 22
+      "pf": 41,
+      "pa": 41
     },
     {
       "id": 4,
       "player1": "Elissa Berger",
       "player2": "Jameson Torrence",
       "wins": 0,
-      "losses": 1,
-      "pf": 7,
-      "pa": 21
+      "losses": 2,
+      "pf": 26,
+      "pa": 42
     },
     {
       "id": 5,
@@ -75,18 +75,18 @@
       "player1": "William Rouse",
       "player2": "Chris Curtis",
       "wins": 2,
-      "losses": 0,
-      "pf": 44,
-      "pa": 36
+      "losses": 1,
+      "pf": 52,
+      "pa": 57
     },
     {
       "id": 9,
       "player1": "Daniel Rabinovich",
       "player2": "Suk Shah",
       "wins": 2,
-      "losses": 1,
-      "pf": 63,
-      "pa": 47
+      "losses": 2,
+      "pf": 74,
+      "pa": 68
     },
     {
       "id": 10,
@@ -110,10 +110,10 @@
       "id": 12,
       "player1": "Ayisha Tahir",
       "player2": "Tim Schloff",
-      "wins": 1,
+      "wins": 2,
       "losses": 1,
-      "pf": 39,
-      "pa": 39
+      "pf": 60,
+      "pa": 47
     },
     {
       "id": 13,
@@ -250,8 +250,8 @@
         {
           "home": 12,
           "away": 8,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 21,
+          "awayScore": 8
         },
         {
           "home": 13,
@@ -274,8 +274,8 @@
         {
           "home": 3,
           "away": 4,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 21,
+          "awayScore": 19
         }
       ]
     },
@@ -286,8 +286,8 @@
         {
           "home": 1,
           "away": 9,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 21,
+          "awayScore": 11
         },
         {
           "home": 10,
