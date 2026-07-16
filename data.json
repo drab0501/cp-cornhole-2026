@@ -3,7 +3,7 @@
     "name": "CP Cornhole League 2026",
     "season": "Summer 2026",
     "totalWeeks": 5,
-    "currentWeek": 4,
+    "currentWeek": 3,
     "status": "regular"
   },
   "teams": [
@@ -11,10 +11,10 @@
       "id": 1,
       "player1": "Pat Tobin",
       "player2": "Jayla Williams-Craig",
-      "wins": 3,
+      "wins": 4,
       "losses": 0,
-      "pf": 63,
-      "pa": 42
+      "pf": 84,
+      "pa": 49
     },
     {
       "id": 2,
@@ -93,9 +93,9 @@
       "player1": "Hannah Christopher",
       "player2": "Pace Williams",
       "wins": 0,
-      "losses": 1,
-      "pf": 3,
-      "pa": 21
+      "losses": 2,
+      "pf": 10,
+      "pa": 42
     },
     {
       "id": 11,
@@ -238,8 +238,8 @@
         {
           "home": 1,
           "away": 10,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 21,
+          "awayScore": 7
         },
         {
           "home": 11,
