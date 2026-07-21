@@ -609,7 +609,7 @@ function renderMatches(week) {
   const dl = document.getElementById('week-deadline');
   if (dl) {
     dl.innerHTML = weekData.deadline
-      ? `Play your Week ${week} match by ${fmtDate(weekData.deadline, true)} <span>· report results by end of day</span>`
+      ? `Week ${week} of ${DATA.league.totalWeeks} <span>· play your match by ${fmtDate(weekData.deadline, true)} · report results by end of day</span>`
       : '';
   }
   let html = '';
