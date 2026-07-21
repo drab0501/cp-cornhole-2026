@@ -3,7 +3,7 @@
     "name": "CP Cornhole League 2026",
     "season": "Summer 2026",
     "totalWeeks": 5,
-    "currentWeek": 4,
+    "currentWeek": 3,
     "status": "regular"
   },
   "teams": [
@@ -47,10 +47,10 @@
       "id": 5,
       "player1": "Abraham Jimenez",
       "player2": "Meg Rowley",
-      "wins": 1,
+      "wins": 2,
       "losses": 1,
-      "pf": 37,
-      "pa": 41
+      "pf": 58,
+      "pa": 61
     },
     {
       "id": 6,
@@ -120,9 +120,9 @@
       "player1": "Erica Bunnell",
       "player2": "Raveen Patel",
       "wins": 1,
-      "losses": 3,
-      "pf": 58,
-      "pa": 81
+      "losses": 4,
+      "pf": 78,
+      "pa": 102
     },
     {
       "id": 14,
@@ -310,8 +310,8 @@
         {
           "home": 13,
           "away": 5,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 20,
+          "awayScore": 21
         },
         {
           "home": 14,
