@@ -30,9 +30,9 @@
       "player1": "Jillian Laughlin",
       "player2": "Bailey Herridge",
       "wins": 1,
-      "losses": 1,
-      "pf": 41,
-      "pa": 41
+      "losses": 2,
+      "pf": 44,
+      "pa": 62
     },
     {
       "id": 4,
@@ -56,19 +56,19 @@
       "id": 6,
       "player1": "Jon Cordes",
       "player2": "David Gifford",
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
-      "pf": 45,
-      "pa": 45
+      "pf": 66,
+      "pa": 63
     },
     {
       "id": 7,
       "player1": "Tom Lisnich",
       "player2": "Grace Wentz",
       "wins": 2,
-      "losses": 0,
-      "pf": 42,
-      "pa": 25
+      "losses": 1,
+      "pf": 56,
+      "pa": 46
     },
     {
       "id": 8,
@@ -83,10 +83,10 @@
       "id": 9,
       "player1": "Daniel Rabinovich",
       "player2": "Suk Shah",
-      "wins": 2,
+      "wins": 3,
       "losses": 2,
-      "pf": 74,
-      "pa": 68
+      "pf": 95,
+      "pa": 71
     },
     {
       "id": 10,
@@ -101,19 +101,19 @@
       "id": 11,
       "player1": "Doug Nardi",
       "player2": "Matt McGinn",
-      "wins": 1,
+      "wins": 2,
       "losses": 2,
-      "pf": 54,
-      "pa": 49
+      "pf": 75,
+      "pa": 63
     },
     {
       "id": 12,
       "player1": "Ayisha Tahir",
       "player2": "Tim Schloff",
       "wins": 3,
-      "losses": 1,
-      "pf": 81,
-      "pa": 57
+      "losses": 2,
+      "pf": 99,
+      "pa": 78
     },
     {
       "id": 13,
@@ -298,14 +298,14 @@
         {
           "home": 11,
           "away": 7,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 21,
+          "awayScore": 14
         },
         {
           "home": 12,
           "away": 6,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 18,
+          "awayScore": 21
         },
         {
           "home": 13,
@@ -352,8 +352,8 @@
         {
           "home": 9,
           "away": 3,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 21,
+          "awayScore": 3
         },
         {
           "home": 10,
