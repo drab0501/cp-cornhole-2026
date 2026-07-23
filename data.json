@@ -102,9 +102,9 @@
       "player1": "Doug Nardi",
       "player2": "Matt McGinn",
       "wins": 2,
-      "losses": 2,
-      "pf": 75,
-      "pa": 63
+      "losses": 3,
+      "pf": 87,
+      "pa": 84
     },
     {
       "id": 12,
@@ -128,10 +128,10 @@
       "id": 14,
       "player1": "Adarsh Menon",
       "player2": "Kevin Koehler",
-      "wins": 0,
+      "wins": 1,
       "losses": 2,
-      "pf": 36,
-      "pa": 42
+      "pf": 57,
+      "pa": 54
     }
   ],
   "weeks": [
@@ -364,8 +364,8 @@
         {
           "home": 11,
           "away": 14,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 12,
+          "awayScore": 21
         },
         {
           "home": 12,
