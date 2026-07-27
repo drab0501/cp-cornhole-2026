@@ -21,9 +21,9 @@
       "player1": "Tate Miller",
       "player2": "Brandon Eckhardt",
       "wins": 1,
-      "losses": 0,
-      "pf": 21,
-      "pa": 16
+      "losses": 1,
+      "pf": 36,
+      "pa": 37
     },
     {
       "id": 3,
@@ -65,10 +65,10 @@
       "id": 7,
       "player1": "Tom Lisnich",
       "player2": "Grace Wentz",
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
-      "pf": 56,
-      "pa": 46
+      "pf": 77,
+      "pa": 61
     },
     {
       "id": 8,
@@ -160,8 +160,8 @@
         {
           "home": 2,
           "away": 7,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 15,
+          "awayScore": 21
         },
         {
           "home": 6,
