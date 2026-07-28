@@ -322,9 +322,10 @@
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     padding: 32px 24px;
-    overflow-x: auto;
+    overflow: hidden;
   }
-  .bracket-tree { position: relative; margin: 0 auto; }
+  .bracket-scale-wrap { position: relative; width: 100%; overflow: hidden; }
+  .bracket-tree { position: absolute; top: 0; left: 0; }
   .bracket-round-label {
     position: absolute;
     top: 0;
@@ -686,7 +687,7 @@ function renderBracket() {
   const totalW = leftOf(3) + CHAMP_W;
   const totalH = LABEL_H + treeH;
 
-  let html = `<div class="bracket-tree" style="width:${totalW}px;height:${totalH}px;min-width:${totalW}px;">`;
+  let html = `<div class="bracket-scale-wrap" id="bracket-scale-wrap"><div class="bracket-tree" id="bracket-tree-el" style="width:${totalW}px;height:${totalH}px;">`;
 
   const labels = ['Quarterfinals', 'Semifinals', 'Championship', 'CP Champion'];
   labels.forEach((label, r) => {
@@ -770,9 +771,27 @@ function renderBracket() {
     html += hLine(xRight, y, xLeft - xRight);
   }
 
-  html += '</div>';
+  html += '</div></div>';
   wrap.innerHTML = html;
+
+  // Scale the tree to fit the available width so it never needs to scroll
+  const outer = document.getElementById('bracket-scale-wrap');
+  const treeEl = document.getElementById('bracket-tree-el');
+  const styles = getComputedStyle(wrap);
+  const available = wrap.clientWidth - parseFloat(styles.paddingLeft) - parseFloat(styles.paddingRight);
+  const scale = Math.min(1, available / totalW);
+  treeEl.style.transform = `scale(${scale})`;
+  treeEl.style.transformOrigin = 'top left';
+  outer.style.height = (totalH * scale) + 'px';
 }
+
+let bracketResizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(bracketResizeTimer);
+  bracketResizeTimer = setTimeout(() => {
+    if (DATA && DATA.playoffs && DATA.playoffs.active) renderBracket();
+  }, 150);
+});
 
 function showTab(name) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
