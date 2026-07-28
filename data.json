@@ -4,7 +4,7 @@
     "season": "Summer 2026",
     "totalWeeks": 5,
     "currentWeek": 5,
-    "status": "regular"
+    "status": "playoffs"
   },
   "teams": [
     {
@@ -377,7 +377,7 @@
     }
   ],
   "playoffs": {
-    "active": false,
+    "active": true,
     "bracket": [
       {
         "round": "Quarterfinals",
