@@ -779,7 +779,7 @@ function renderBracket() {
   const treeEl = document.getElementById('bracket-tree-el');
   const styles = getComputedStyle(wrap);
   const available = wrap.clientWidth - parseFloat(styles.paddingLeft) - parseFloat(styles.paddingRight);
-  const scale = Math.min(1, available / totalW);
+  const scale = available > 0 ? Math.min(1, available / totalW) : 1;
   treeEl.style.transform = `scale(${scale})`;
   treeEl.style.transformOrigin = 'top left';
   outer.style.height = (totalH * scale) + 'px';
@@ -798,6 +798,7 @@ function showTab(name) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.getElementById('tab-' + name).classList.add('active');
   event.target.classList.add('active');
+  if (name === 'bracket' && DATA && DATA.playoffs && DATA.playoffs.active) renderBracket();
 }
 
 loadData();
