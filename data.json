@@ -21,9 +21,9 @@
       "player1": "Tate Miller",
       "player2": "Brandon Eckhardt",
       "wins": 1,
-      "losses": 1,
-      "pf": 36,
-      "pa": 37
+      "losses": 2,
+      "pf": 54,
+      "pa": 58
     },
     {
       "id": 3,
@@ -47,10 +47,10 @@
       "id": 5,
       "player1": "Abraham Jimenez",
       "player2": "Meg Rowley",
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
-      "pf": 58,
-      "pa": 61
+      "pf": 79,
+      "pa": 79
     },
     {
       "id": 6,
@@ -268,8 +268,8 @@
         {
           "home": 2,
           "away": 5,
-          "homeScore": null,
-          "awayScore": null
+          "homeScore": 18,
+          "awayScore": 21
         },
         {
           "home": 3,
