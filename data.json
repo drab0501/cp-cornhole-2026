@@ -385,32 +385,32 @@
           {
             "seed1": 1,
             "seed2": 8,
-            "team1": null,
-            "team2": null,
-            "score1": null,
-            "score2": null
+            "team1": 1,
+            "team2": 14,
+            "score1": 21,
+            "score2": 18
           },
           {
             "seed1": 4,
             "seed2": 5,
-            "team1": null,
-            "team2": null,
+            "team1": 7,
+            "team2": 6,
             "score1": null,
             "score2": null
           },
           {
             "seed1": 3,
             "seed2": 6,
-            "team1": null,
-            "team2": null,
+            "team1": 12,
+            "team2": 8,
             "score1": null,
             "score2": null
           },
           {
             "seed1": 2,
             "seed2": 7,
-            "team1": null,
-            "team2": null,
+            "team1": 9,
+            "team2": 5,
             "score1": null,
             "score2": null
           }
