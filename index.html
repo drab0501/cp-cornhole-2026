@@ -716,30 +716,42 @@ function renderBracket() {
   }
 
   // Quarterfinals
+  const qfWinnerIds = [];
   qf.forEach((m, i) => {
-    const n1 = m.team1 || seedName(m.seed1);
-    const n2 = m.team2 || seedName(m.seed2);
+    const t1id = m.team1 || null;
+    const t2id = m.team2 || null;
+    const n1 = t1id ? teamName(t1id) : seedName(m.seed1);
+    const n2 = t2id ? teamName(t2id) : seedName(m.seed2);
     const w1 = m.score1 !== null && m.score1 > m.score2;
     const w2 = m.score2 !== null && m.score2 > m.score1;
+    qfWinnerIds.push(w1 ? t1id : (w2 ? t2id : null));
     html += matchBox(0, i, n1, n2, m.score1, m.score2, w1, w2, false, false, m.seed1, m.seed2);
   });
 
   // Semifinals
+  const sfWinnerIds = [];
   sf.forEach((m, i) => {
-    const n1 = m.team1 || 'TBD', n2 = m.team2 || 'TBD';
+    const t1id = m.team1 || qfWinnerIds[2 * i];
+    const t2id = m.team2 || qfWinnerIds[2 * i + 1];
+    const n1 = t1id ? teamName(t1id) : 'TBD';
+    const n2 = t2id ? teamName(t2id) : 'TBD';
     const w1 = m.score1 !== null && m.score1 > m.score2;
     const w2 = m.score2 !== null && m.score2 > m.score1;
-    html += matchBox(1, i, n1, n2, m.score1, m.score2, w1, w2, !m.team1, !m.team2);
+    sfWinnerIds.push(w1 ? t1id : (w2 ? t2id : null));
+    html += matchBox(1, i, n1, n2, m.score1, m.score2, w1, w2, !t1id, !t2id);
   });
 
   // Championship
-  const cn1 = cf.team1 || 'TBD', cn2 = cf.team2 || 'TBD';
+  const ct1id = cf.team1 || sfWinnerIds[0];
+  const ct2id = cf.team2 || sfWinnerIds[1];
+  const cn1 = ct1id ? teamName(ct1id) : 'TBD';
+  const cn2 = ct2id ? teamName(ct2id) : 'TBD';
   const cw1 = cf.score1 !== null && cf.score1 > cf.score2;
   const cw2 = cf.score2 !== null && cf.score2 > cf.score1;
-  html += matchBox(2, 0, cn1, cn2, cf.score1, cf.score2, cw1, cw2, !cf.team1, !cf.team2);
+  html += matchBox(2, 0, cn1, cn2, cf.score1, cf.score2, cw1, cw2, !ct1id, !ct2id);
 
   // Champion box
-  const champion = cw1 ? cn1 : cw2 ? cn2 : null;
+  const champion = cw1 ? cn1 : (cw2 ? cn2 : null);
   const champTop = LABEL_H + centerY(3, 0) - CHAMP_H / 2;
   html += `<div class="champion-box" style="left:${leftOf(3)}px;top:${champTop}px;width:${CHAMP_W}px;height:${CHAMP_H}px;">
     <div class="champion-trophy">🏆</div>
