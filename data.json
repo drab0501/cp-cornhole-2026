@@ -395,8 +395,8 @@
             "seed2": 5,
             "team1": 7,
             "team2": 6,
-            "score1": null,
-            "score2": null
+            "score1": 9,
+            "score2": 21
           },
           {
             "seed1": 3,
@@ -420,10 +420,10 @@
         "round": "Semifinals",
         "matches": [
           {
-            "team1": null,
-            "team2": null,
-            "score1": null,
-            "score2": null
+            "team1": 1,
+            "team2": 6,
+            "score1": 11,
+            "score2": 21
           },
           {
             "team1": null,
