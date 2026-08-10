@@ -403,8 +403,8 @@
                         "seed2": 6,
                         "team1": 12,
                         "team2": 8,
-                        "score1": null,
-                        "score2": null
+                        "score1": 21,
+                        "score2": 8
                     },
                     {
                         "seed1": 2,
@@ -426,8 +426,8 @@
                         "score2": 21
                     },
                     {
-                        "team1": null,
-                        "team2": null,
+                        "team1": 12,
+                        "team2": 9,
                         "score1": null,
                         "score2": null
                     }
