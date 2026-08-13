@@ -1,450 +1,450 @@
 {
-    "league": {
-        "name": "CP Cornhole League 2026",
-        "season": "Summer 2026",
-        "totalWeeks": 5,
-        "currentWeek": 5,
-        "status": "playoffs"
+  "league": {
+    "name": "CP Cornhole League 2026",
+    "season": "Summer 2026",
+    "totalWeeks": 5,
+    "currentWeek": 5,
+    "status": "playoffs"
+  },
+  "teams": [
+    {
+      "id": 1,
+      "player1": "Pat Tobin",
+      "player2": "Jayla Williams-Craig",
+      "wins": 5,
+      "losses": 0,
+      "pf": 105,
+      "pa": 62
     },
-    "teams": [
-        {
-            "id": 1,
-            "player1": "Pat Tobin",
-            "player2": "Jayla Williams-Craig",
-            "wins": 5,
-            "losses": 0,
-            "pf": 105,
-            "pa": 62
-        },
-        {
-            "id": 2,
-            "player1": "Tate Miller",
-            "player2": "Brandon Eckhardt",
-            "wins": 1,
-            "losses": 2,
-            "pf": 54,
-            "pa": 58
-        },
-        {
-            "id": 3,
-            "player1": "Jillian Laughlin",
-            "player2": "Bailey Herridge",
-            "wins": 1,
-            "losses": 2,
-            "pf": 44,
-            "pa": 62
-        },
-        {
-            "id": 4,
-            "player1": "Elissa Berger",
-            "player2": "Jameson Torrence",
-            "wins": 0,
-            "losses": 5,
-            "pf": 47,
-            "pa": 105
-        },
-        {
-            "id": 5,
-            "player1": "Abraham Jimenez",
-            "player2": "Meg Rowley",
-            "wins": 3,
-            "losses": 1,
-            "pf": 79,
-            "pa": 79
-        },
-        {
-            "id": 6,
-            "player1": "Jon Cordes",
-            "player2": "David Gifford",
-            "wins": 3,
-            "losses": 2,
-            "pf": 87,
-            "pa": 74
-        },
-        {
-            "id": 7,
-            "player1": "Tom Lisnich",
-            "player2": "Grace Wentz",
-            "wins": 3,
-            "losses": 1,
-            "pf": 77,
-            "pa": 61
-        },
-        {
-            "id": 8,
-            "player1": "William Rouse",
-            "player2": "Chris Curtis",
-            "wins": 3,
-            "losses": 1,
-            "pf": 73,
-            "pa": 64
-        },
-        {
-            "id": 9,
-            "player1": "Daniel Rabinovich",
-            "player2": "Suk Shah",
-            "wins": 3,
-            "losses": 2,
-            "pf": 95,
-            "pa": 71
-        },
-        {
-            "id": 10,
-            "player1": "Hannah Christopher",
-            "player2": "Pace Williams",
-            "wins": 0,
-            "losses": 2,
-            "pf": 10,
-            "pa": 42
-        },
-        {
-            "id": 11,
-            "player1": "Doug Nardi",
-            "player2": "Matt McGinn",
-            "wins": 2,
-            "losses": 3,
-            "pf": 87,
-            "pa": 84
-        },
-        {
-            "id": 12,
-            "player1": "Ayisha Tahir",
-            "player2": "Tim Schloff",
-            "wins": 3,
-            "losses": 2,
-            "pf": 99,
-            "pa": 78
-        },
-        {
-            "id": 13,
-            "player1": "Erica Bunnell",
-            "player2": "Raveen Patel",
-            "wins": 1,
-            "losses": 4,
-            "pf": 78,
-            "pa": 102
-        },
-        {
-            "id": 14,
-            "player1": "Adarsh Menon",
-            "player2": "Kevin Koehler",
-            "wins": 2,
-            "losses": 3,
-            "pf": 89,
-            "pa": 82
-        }
-    ],
-    "weeks": [
-        {
-            "week": 1,
-            "deadline": "2026-06-28",
-            "matches": [
-                {
-                    "home": 9,
-                    "away": 8,
-                    "homeScore": 21,
-                    "awayScore": 23
-                },
-                {
-                    "home": 14,
-                    "away": 13,
-                    "homeScore": 18,
-                    "awayScore": 21
-                },
-                {
-                    "home": 5,
-                    "away": 3,
-                    "homeScore": 22,
-                    "awayScore": 20
-                },
-                {
-                    "home": 2,
-                    "away": 7,
-                    "homeScore": 15,
-                    "awayScore": 21
-                },
-                {
-                    "home": 6,
-                    "away": 10,
-                    "homeScore": 21,
-                    "awayScore": 3
-                },
-                {
-                    "home": 12,
-                    "away": 1,
-                    "homeScore": 18,
-                    "awayScore": 21
-                },
-                {
-                    "home": 4,
-                    "away": 11,
-                    "homeScore": 7,
-                    "awayScore": 21
-                }
-            ]
-        },
-        {
-            "week": 2,
-            "deadline": "2026-07-05",
-            "matches": [
-                {
-                    "home": 1,
-                    "away": 13,
-                    "homeScore": 21,
-                    "awayScore": 13
-                },
-                {
-                    "home": 14,
-                    "away": 12,
-                    "homeScore": 18,
-                    "awayScore": 21
-                },
-                {
-                    "home": 2,
-                    "away": 11,
-                    "homeScore": 21,
-                    "awayScore": 16
-                },
-                {
-                    "home": 3,
-                    "away": 10,
-                    "homeScore": null,
-                    "awayScore": null
-                },
-                {
-                    "home": 4,
-                    "away": 9,
-                    "homeScore": 7,
-                    "awayScore": 21
-                },
-                {
-                    "home": 5,
-                    "away": 8,
-                    "homeScore": 15,
-                    "awayScore": 21
-                },
-                {
-                    "home": 6,
-                    "away": 7,
-                    "homeScore": 11,
-                    "awayScore": 21
-                }
-            ]
-        },
-        {
-            "week": 3,
-            "deadline": "2026-07-12",
-            "matches": [
-                {
-                    "home": 1,
-                    "away": 10,
-                    "homeScore": 21,
-                    "awayScore": 7
-                },
-                {
-                    "home": 11,
-                    "away": 9,
-                    "homeScore": 17,
-                    "awayScore": 21
-                },
-                {
-                    "home": 12,
-                    "away": 8,
-                    "homeScore": 21,
-                    "awayScore": 8
-                },
-                {
-                    "home": 13,
-                    "away": 7,
-                    "homeScore": 14,
-                    "awayScore": 21
-                },
-                {
-                    "home": 14,
-                    "away": 6,
-                    "homeScore": 11,
-                    "awayScore": 21
-                },
-                {
-                    "home": 2,
-                    "away": 5,
-                    "homeScore": 18,
-                    "awayScore": 21
-                },
-                {
-                    "home": 3,
-                    "away": 4,
-                    "homeScore": 21,
-                    "awayScore": 19
-                }
-            ]
-        },
-        {
-            "week": 4,
-            "deadline": "2026-07-19",
-            "matches": [
-                {
-                    "home": 1,
-                    "away": 9,
-                    "homeScore": 21,
-                    "awayScore": 11
-                },
-                {
-                    "home": 10,
-                    "away": 8,
-                    "homeScore": null,
-                    "awayScore": null
-                },
-                {
-                    "home": 11,
-                    "away": 7,
-                    "homeScore": 21,
-                    "awayScore": 14
-                },
-                {
-                    "home": 12,
-                    "away": 6,
-                    "homeScore": 18,
-                    "awayScore": 21
-                },
-                {
-                    "home": 13,
-                    "away": 5,
-                    "homeScore": 20,
-                    "awayScore": 21
-                },
-                {
-                    "home": 14,
-                    "away": 4,
-                    "homeScore": 21,
-                    "awayScore": 7
-                },
-                {
-                    "home": 2,
-                    "away": 3,
-                    "homeScore": null,
-                    "awayScore": null
-                }
-            ]
-        },
-        {
-            "week": 5,
-            "deadline": "2026-07-26",
-            "matches": [
-                {
-                    "home": 1,
-                    "away": 6,
-                    "homeScore": 21,
-                    "awayScore": 13
-                },
-                {
-                    "home": 7,
-                    "away": 5,
-                    "homeScore": null,
-                    "awayScore": null
-                },
-                {
-                    "home": 8,
-                    "away": 4,
-                    "homeScore": 21,
-                    "awayScore": 7
-                },
-                {
-                    "home": 9,
-                    "away": 3,
-                    "homeScore": 21,
-                    "awayScore": 3
-                },
-                {
-                    "home": 10,
-                    "away": 2,
-                    "homeScore": null,
-                    "awayScore": null
-                },
-                {
-                    "home": 11,
-                    "away": 14,
-                    "homeScore": 12,
-                    "awayScore": 21
-                },
-                {
-                    "home": 12,
-                    "away": 13,
-                    "homeScore": 21,
-                    "awayScore": 10
-                }
-            ]
-        }
-    ],
-    "playoffs": {
-        "active": true,
-        "bracket": [
-            {
-                "round": "Quarterfinals",
-                "matches": [
-                    {
-                        "seed1": 1,
-                        "seed2": 8,
-                        "team1": 1,
-                        "team2": 14,
-                        "score1": 21,
-                        "score2": 18
-                    },
-                    {
-                        "seed1": 4,
-                        "seed2": 5,
-                        "team1": 7,
-                        "team2": 6,
-                        "score1": 9,
-                        "score2": 21
-                    },
-                    {
-                        "seed1": 3,
-                        "seed2": 6,
-                        "team1": 12,
-                        "team2": 8,
-                        "score1": 21,
-                        "score2": 8
-                    },
-                    {
-                        "seed1": 2,
-                        "seed2": 7,
-                        "team1": 9,
-                        "team2": 5,
-                        "score1": 21,
-                        "score2": 8
-                    }
-                ]
-            },
-            {
-                "round": "Semifinals",
-                "matches": [
-                    {
-                        "team1": 1,
-                        "team2": 6,
-                        "score1": 11,
-                        "score2": 21
-                    },
-                    {
-                        "team1": 12,
-                        "team2": 9,
-                        "score1": null,
-                        "score2": null
-                    }
-                ]
-            },
-            {
-                "round": "Championship",
-                "matches": [
-                    {
-                        "team1": null,
-                        "team2": null,
-                        "score1": null,
-                        "score2": null
-                    }
-                ]
-            }
-        ],
-        "startDate": "2026-07-27"
+    {
+      "id": 2,
+      "player1": "Tate Miller",
+      "player2": "Brandon Eckhardt",
+      "wins": 1,
+      "losses": 2,
+      "pf": 54,
+      "pa": 58
+    },
+    {
+      "id": 3,
+      "player1": "Jillian Laughlin",
+      "player2": "Bailey Herridge",
+      "wins": 1,
+      "losses": 2,
+      "pf": 44,
+      "pa": 62
+    },
+    {
+      "id": 4,
+      "player1": "Elissa Berger",
+      "player2": "Jameson Torrence",
+      "wins": 0,
+      "losses": 5,
+      "pf": 47,
+      "pa": 105
+    },
+    {
+      "id": 5,
+      "player1": "Abraham Jimenez",
+      "player2": "Meg Rowley",
+      "wins": 3,
+      "losses": 1,
+      "pf": 79,
+      "pa": 79
+    },
+    {
+      "id": 6,
+      "player1": "Jon Cordes",
+      "player2": "David Gifford",
+      "wins": 3,
+      "losses": 2,
+      "pf": 87,
+      "pa": 74
+    },
+    {
+      "id": 7,
+      "player1": "Tom Lisnich",
+      "player2": "Grace Wentz",
+      "wins": 3,
+      "losses": 1,
+      "pf": 77,
+      "pa": 61
+    },
+    {
+      "id": 8,
+      "player1": "William Rouse",
+      "player2": "Chris Curtis",
+      "wins": 3,
+      "losses": 1,
+      "pf": 73,
+      "pa": 64
+    },
+    {
+      "id": 9,
+      "player1": "Daniel Rabinovich",
+      "player2": "Suk Shah",
+      "wins": 3,
+      "losses": 2,
+      "pf": 95,
+      "pa": 71
+    },
+    {
+      "id": 10,
+      "player1": "Hannah Christopher",
+      "player2": "Pace Williams",
+      "wins": 0,
+      "losses": 2,
+      "pf": 10,
+      "pa": 42
+    },
+    {
+      "id": 11,
+      "player1": "Doug Nardi",
+      "player2": "Matt McGinn",
+      "wins": 2,
+      "losses": 3,
+      "pf": 87,
+      "pa": 84
+    },
+    {
+      "id": 12,
+      "player1": "Ayisha Tahir",
+      "player2": "Tim Schloff",
+      "wins": 3,
+      "losses": 2,
+      "pf": 99,
+      "pa": 78
+    },
+    {
+      "id": 13,
+      "player1": "Erica Bunnell",
+      "player2": "Raveen Patel",
+      "wins": 1,
+      "losses": 4,
+      "pf": 78,
+      "pa": 102
+    },
+    {
+      "id": 14,
+      "player1": "Adarsh Menon",
+      "player2": "Kevin Koehler",
+      "wins": 2,
+      "losses": 3,
+      "pf": 89,
+      "pa": 82
     }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "deadline": "2026-06-28",
+      "matches": [
+        {
+          "home": 9,
+          "away": 8,
+          "homeScore": 21,
+          "awayScore": 23
+        },
+        {
+          "home": 14,
+          "away": 13,
+          "homeScore": 18,
+          "awayScore": 21
+        },
+        {
+          "home": 5,
+          "away": 3,
+          "homeScore": 22,
+          "awayScore": 20
+        },
+        {
+          "home": 2,
+          "away": 7,
+          "homeScore": 15,
+          "awayScore": 21
+        },
+        {
+          "home": 6,
+          "away": 10,
+          "homeScore": 21,
+          "awayScore": 3
+        },
+        {
+          "home": 12,
+          "away": 1,
+          "homeScore": 18,
+          "awayScore": 21
+        },
+        {
+          "home": 4,
+          "away": 11,
+          "homeScore": 7,
+          "awayScore": 21
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "deadline": "2026-07-05",
+      "matches": [
+        {
+          "home": 1,
+          "away": 13,
+          "homeScore": 21,
+          "awayScore": 13
+        },
+        {
+          "home": 14,
+          "away": 12,
+          "homeScore": 18,
+          "awayScore": 21
+        },
+        {
+          "home": 2,
+          "away": 11,
+          "homeScore": 21,
+          "awayScore": 16
+        },
+        {
+          "home": 3,
+          "away": 10,
+          "homeScore": null,
+          "awayScore": null
+        },
+        {
+          "home": 4,
+          "away": 9,
+          "homeScore": 7,
+          "awayScore": 21
+        },
+        {
+          "home": 5,
+          "away": 8,
+          "homeScore": 15,
+          "awayScore": 21
+        },
+        {
+          "home": 6,
+          "away": 7,
+          "homeScore": 11,
+          "awayScore": 21
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "deadline": "2026-07-12",
+      "matches": [
+        {
+          "home": 1,
+          "away": 10,
+          "homeScore": 21,
+          "awayScore": 7
+        },
+        {
+          "home": 11,
+          "away": 9,
+          "homeScore": 17,
+          "awayScore": 21
+        },
+        {
+          "home": 12,
+          "away": 8,
+          "homeScore": 21,
+          "awayScore": 8
+        },
+        {
+          "home": 13,
+          "away": 7,
+          "homeScore": 14,
+          "awayScore": 21
+        },
+        {
+          "home": 14,
+          "away": 6,
+          "homeScore": 11,
+          "awayScore": 21
+        },
+        {
+          "home": 2,
+          "away": 5,
+          "homeScore": 18,
+          "awayScore": 21
+        },
+        {
+          "home": 3,
+          "away": 4,
+          "homeScore": 21,
+          "awayScore": 19
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "deadline": "2026-07-19",
+      "matches": [
+        {
+          "home": 1,
+          "away": 9,
+          "homeScore": 21,
+          "awayScore": 11
+        },
+        {
+          "home": 10,
+          "away": 8,
+          "homeScore": null,
+          "awayScore": null
+        },
+        {
+          "home": 11,
+          "away": 7,
+          "homeScore": 21,
+          "awayScore": 14
+        },
+        {
+          "home": 12,
+          "away": 6,
+          "homeScore": 18,
+          "awayScore": 21
+        },
+        {
+          "home": 13,
+          "away": 5,
+          "homeScore": 20,
+          "awayScore": 21
+        },
+        {
+          "home": 14,
+          "away": 4,
+          "homeScore": 21,
+          "awayScore": 7
+        },
+        {
+          "home": 2,
+          "away": 3,
+          "homeScore": null,
+          "awayScore": null
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "deadline": "2026-07-26",
+      "matches": [
+        {
+          "home": 1,
+          "away": 6,
+          "homeScore": 21,
+          "awayScore": 13
+        },
+        {
+          "home": 7,
+          "away": 5,
+          "homeScore": null,
+          "awayScore": null
+        },
+        {
+          "home": 8,
+          "away": 4,
+          "homeScore": 21,
+          "awayScore": 7
+        },
+        {
+          "home": 9,
+          "away": 3,
+          "homeScore": 21,
+          "awayScore": 3
+        },
+        {
+          "home": 10,
+          "away": 2,
+          "homeScore": null,
+          "awayScore": null
+        },
+        {
+          "home": 11,
+          "away": 14,
+          "homeScore": 12,
+          "awayScore": 21
+        },
+        {
+          "home": 12,
+          "away": 13,
+          "homeScore": 21,
+          "awayScore": 10
+        }
+      ]
+    }
+  ],
+  "playoffs": {
+    "active": true,
+    "bracket": [
+      {
+        "round": "Quarterfinals",
+        "matches": [
+          {
+            "seed1": 1,
+            "seed2": 8,
+            "team1": 1,
+            "team2": 14,
+            "score1": 21,
+            "score2": 18
+          },
+          {
+            "seed1": 4,
+            "seed2": 5,
+            "team1": 7,
+            "team2": 6,
+            "score1": 9,
+            "score2": 21
+          },
+          {
+            "seed1": 3,
+            "seed2": 6,
+            "team1": 12,
+            "team2": 8,
+            "score1": 21,
+            "score2": 8
+          },
+          {
+            "seed1": 2,
+            "seed2": 7,
+            "team1": 9,
+            "team2": 5,
+            "score1": 21,
+            "score2": 8
+          }
+        ]
+      },
+      {
+        "round": "Semifinals",
+        "matches": [
+          {
+            "team1": 1,
+            "team2": 6,
+            "score1": 11,
+            "score2": 21
+          },
+          {
+            "team1": 12,
+            "team2": 9,
+            "score1": 13,
+            "score2": 21
+          }
+        ]
+      },
+      {
+        "round": "Championship",
+        "matches": [
+          {
+            "team1": 6,
+            "team2": 9,
+            "score1": null,
+            "score2": null
+          }
+        ]
+      }
+    ],
+    "startDate": "2026-07-27"
+  }
 }
